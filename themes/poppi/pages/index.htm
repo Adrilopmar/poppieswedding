@@ -1,0 +1,126 @@
+url = "/"
+layout = "default"
+title = "Boda | Jael & Álex"
+meta_title = "Boda | Jael Álex"
+==
+<!-- start page-wrapper -->
+    <div class="page-wrapper">
+        {# {% partial 'preloader' %} #}
+        
+        <!-- Start header -->
+            {% partial 'header' %}
+        <!-- end of header -->
+        <!-- start of hero -->
+        <section class="static-hero" id="std">
+            <div class="hero-container">
+                <div class="hero-inner">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="col-xl-8 col-lg-6 col-12">
+                                <div class="wpo-static-hero-inner">
+                                   {# <div class="shape-1"><img src="assets/images/slider/shape.png" alt=""></div>#}
+                                    
+                                    {# <div class="slide-title">
+                                        <h2>Jael & Álex</h2>
+                                        <h2 class="date">03.05.25</h2>
+                                    </div> #}
+
+                                    {#<div class="shape-2"><img src="assets/images/slider/shape2.png" alt=""></div>#}
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="static-hero-clock">
+            <div class="wpo-wedding-date">
+                <div class="clock-grids">
+                    <img src="{{ 'assets/images/poppies/logo.png' | theme }}" alt="logo poppi" width="250">
+                    <div class="conatainer-clock">
+                        <p>Ya solo faltan...</p>
+                        <div id="clock"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of hero slider -->
+        <!-- start couple-section -->
+        <section class="couple-section section-padding-top" id="donde">
+            <div class="container">
+                <div class="prevent-padding-left-row">
+                    <div class="couple-area">
+                            {# <h3>¿DÓNDE?</h3> #}
+                            <h3>¿Dónde?</h3>
+                            <div class="text-grid bride">
+                                <h3>Masia Piguillem</h3>
+                                <p>Carretera C-37, km. 163, 08572 <br>
+                                    Sant Andreu de la Vola (Barcelona).</p>
+                               {# <div class="social">
+                                    <ul>
+                                        <li><a class="smooth-link" href="#"><i class="ti-facebook"></i></a></li>
+                                        <li><a class="smooth-link" href="#"><i class="ti-twitter-alt"></i></a></li>
+                                        <li><a class="smooth-link" href="#"><i class="ti-instagram"></i></a></li>
+                                    </ul>
+                                </div> #}
+                            </div>
+                            {# <p class="area-description">Será una celebración al aire libre en un rincón ubicado en plena naturaleza y rodeado de jardines, bosques y paisajes cautivadores.</p> #}
+                           
+                            <div class="middle-couple-pic">
+                                <div class="middle-couple-pic-inner">
+                                    <img src="{{ 'assets/images/poppies/foto_masia_piguillem.jpg' | theme }}" alt="poppi field">
+                                </div>
+                            </div>
+                            <p class="area-description">La ceremonia será en el bosque que hay en la misma finca, de allí pasaremos a disfrutar de un aperitivo en el jardín, y por último la cena y la fiesta tendrán lugar en el salón acristalado.</p>
+
+                        </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        
+        <section class="couple-section section-padding-top" id="programa">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col col-xs-12">
+                        <div class="couple-area clearfix">
+                            <div class="text-grid bride">
+                                <h3>
+                                    {# <span class="left-part">PROGRAMA</span><br><span class="right-part">DEL GRAN DÍA</span> #}
+                                    <span class="left-part">Horarios</span>
+                                </h3>
+                                <p class="planning-description">Aquí te detallamos el plan para ese día tan especial.</p>
+                                <p class="planning-description">¡Estamos muy emocionados de poder compartirlo con todos vosotros!</p>
+                                <div class="container-timeline">
+                                    <img src="{{ 'assets/images/poppies/timeline.png' | theme }}" alt="timeline" width="300">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end couple-section -->
+        {% partial 'poppies_form' %}
+        <!-- start wpo-story-section -->
+        
+        {% partial 'informacion_adicional' %}
+
+        <p class="gracias">¡Gracias por ser parte  <br>de nuestra historia!</p>
+        <img src="{{ 'assets/images/poppies/poppy_footer.png' | theme }}" alt="">
+        <!-- end story-section -->
+        <!-- start of wpo-site-footer-section -->
+        {% partial 'footer' %}
+        <!-- end of wpo-site-footer-section -->
+    <!-- end of page-wrapper -->
+    </div>
+    <!-- All JavaScript files
+    ================================================== -->
+    <script src="{{ 'assets/js/jquery.min.js' | theme }}"></script>
+    <script src="{{ 'assets/js/bootstrap.bundle.min.js' | theme}}"></script>
+    <!-- Plugins for this template -->
+    <script src="{{ 'assets/js/modernizr.custom.js' | theme }}"></script>
+    <script src="{{ 'assets/js/jquery.dlmenu.js' | theme}}"></script>
+    <script src="{{ 'assets/js/jquery-plugin-collection.js' | theme }}"></script>
+    <!-- Custom script for this template -->
+    <script src="{{ 'assets/js/script.js' | theme }}"></script>
