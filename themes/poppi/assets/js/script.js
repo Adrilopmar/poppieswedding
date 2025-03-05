@@ -24,31 +24,31 @@
         e.preventDefault();
         $( ".button-hijo").addClass( "margin-top-hijo" );
         $(".formulario-inscripcion-hijos").append(`
-            <div class="inscripcion-hijo" style="display:none">
-                <div>
-                    <input type="text" class="form-control" name="hijo[${index_hijos}][nombre]" id="nombre" placeholder="Nombre">
+            <div class="inscripcion-hijo col-md-12 justify-content-between flex-wrap" style="display:none">
+                <div class="col-md-5">
+                    <input type="text" class="form-control" name="hijo[${index_hijos}][nombre]" id="nombre" placeholder="Nombre*" required>
                 </div>
-                <div>
-                    <input type="text" class="form-control" name="hijo[${index_hijos}][apellidos]" id="apellidos" placeholder="Apellidos">
+                <div class="col-md-5">
+                    <input type="text" class="form-control" name="hijo[${index_hijos}][apellidos]" id="apellidos" placeholder="Apellidos*" required>
                 </div>
-                <div>
-                    <input type="text" class="form-control" name="hijo[${index_hijos}][alergias]" id="alergias" placeholder="Alergias">
+                <div class="col-md-12">
+                    <input type="text" class="form-control" name="hijo[${index_hijos}][alergias]" id="alergias" placeholder="Alergias*" required>
                 </div>
-                <div class="container-servicio-autocar">
-                    <p>¿Servicio de autocar?
-                        <a class="smooth-link mas-info" href="#info">
+                <div class="container-servicio-autocar col-md-6 text-start">
+                    <p class="text-center">¿Servicio de autocar?
+                        <a class="smooth-link mas-info" href="#info"><br class="d-none d-md-block">
                           <small>(Saber más)</small>  
                         </a>
                     </p>
                     <div class="form-autocar">                 
                         <label for="autocarSiHijo${index_hijos}" class="main-label-autocar">
-                            <input type="radio" class="input-autocar" name="hijo[${index_hijos}][autocar]" id="autocarSiHijo${index_hijos}" value="si" >
+                            <input type="radio" class="input-autocar" name="hijo[${index_hijos}][autocar]" id="autocarSiHijo${index_hijos}" value="1" >
                             <label class="deep-label-autocar" for="autocarSiHijo${index_hijos}">Si</label>
                         </label>
                         
                         <label for="autocarNoHijo${index_hijos}">
                             
-                            <input type="radio" class="input-autocar" name="hijo[${index_hijos}][autocar]" id="autocarNoHijo${index_hijos}" value="no" checked>
+                            <input type="radio" class="input-autocar" name="hijo[${index_hijos}][autocar]" id="autocarNoHijo${index_hijos}" value="0" checked>
                             <label class="deep-label-autocar" for="autocarNoHijo${index_hijos}">No</label>
                         </label>
                     </div>
@@ -72,8 +72,8 @@
     // Toggle mobile navigation
     function toggleMobileNavigation() {
         var navbar = $(".navigation-holder");
-        var openBtn = $(".mobile-menu .open-btn");
-        var xbutton = $(".mobile-menu .navbar-toggler");
+        var openBtn = $(".mobail-menu .open-btn");
+        var xbutton = $(".mobail-menu .navbar-toggler");
 
         openBtn.on("click", function(e) {
             e.stopImmediatePropagation();
@@ -957,64 +957,64 @@
     /*------------------------------------------
         = CONTACT FORM SUBMISSION
     -------------------------------------------*/
-    if ($("#contact-form-main").length) {
-        $("#contact-form-main").validate({
-            rules: {
-                name: {
-                    required: true,
-                    minlength: 2
-                },
-
-                email: "required",
-
-                phone: "required",
-
-                adress: "required",
-
-                service: "required",
-
-                guest: "required",
-
-                meal: "required",     
-
-            },
-
-            messages: {
-                name: "Please enter your name",
-                email: "Please enter your email address",
-                phone: "Please enter your phone number",
-                adress: "Please enter your adress",
-                service: "Please select your contact service",
-                guest: "Please select your guest Number",
-                meal: "Please select your Meal Name"
-            },
-
-            submitHandler: function (form) {
-                $.ajax({
-                    type: "POST",
-                    url: "mail-contact.php",
-                    data: $(form).serialize(),
-                    success: function () {
-                        $( "#loader").hide();
-                        $( "#success").slideDown( "slow" );
-                        setTimeout(function() {
-                        $( "#success").slideUp( "slow" );
-                        }, 3000);
-                        form.reset();
-                    },
-                    error: function() {
-                        $( "#loader").hide();
-                        $( "#error").slideDown( "slow" );
-                        setTimeout(function() {
-                        $( "#error").slideUp( "slow" );
-                        }, 3000);
-                    }
-                });
-                return false; // required to block normal submit since you used ajax
-            }
-
-        });
-    }
+//     if ($("#contact-form-main").length) {
+//         $("#contact-form-main").validate({
+//             rules: {
+//                 name: {
+//                     required: true,
+//                     minlength: 2
+//                 },
+// 
+//                 email: "required",
+// 
+//                 phone: "required",
+// 
+//                 adress: "required",
+// 
+//                 service: "required",
+// 
+//                 guest: "required",
+// 
+//                 meal: "required",     
+// 
+//             },
+// 
+//             messages: {
+//                 name: "Please enter your name",
+//                 email: "Please enter your email address",
+//                 phone: "Please enter your phone number",
+//                 adress: "Please enter your adress",
+//                 service: "Please select your contact service",
+//                 guest: "Please select your guest Number",
+//                 meal: "Please select your Meal Name"
+//             },
+// 
+//             submitHandler: function (form) {
+//                 $.ajax({
+//                     type: "POST",
+//                     url: "mail-contact.php",
+//                     data: $(form).serialize(),
+//                     success: function () {
+//                         $( "#loader").hide();
+//                         $( "#success").slideDown( "slow" );
+//                         setTimeout(function() {
+//                         $( "#success").slideUp( "slow" );
+//                         }, 3000);
+//                         form.reset();
+//                     },
+//                     error: function() {
+//                         $( "#loader").hide();
+//                         $( "#error").slideDown( "slow" );
+//                         setTimeout(function() {
+//                         $( "#error").slideUp( "slow" );
+//                         }, 3000);
+//                     }
+//                 });
+//                 return false; // required to block normal submit since you used ajax
+//             }
+// 
+//         });
+//     }
 
 
     /*==========================================================================
@@ -1064,116 +1064,5 @@
         }, 200));
     });
 
-
-    // color-variation
-
-    /*------------------------------------------
-      color toggle
-    -------------------------------------------*/
-    if($(".color-switcher-wrap").length) {
-        var colorToggleBtn = $(".color-toggle-btn");
-        var colorContent = $(".color-switcher-item");
-        var body = $("body");
-
-        colorToggleBtn.on("click", function(e) {
-            colorContent.toggleClass("color-switcher-open");
-            e.stopPropagation();
-        });
-
-        body.on("click", function() {
-            colorContent.removeClass("color-switcher-open");
-        }).find(searchContent).on("click", function(e) {
-            e.stopPropagation();
-        });
-    }
-
-    // color-change
-    $('.color-switcher-wrap ul li.btn').on("click", function(e){
-        e.stopPropagation();
-        $('.color-switcher-wrap ul li.btn').removeClass('active')
-        $(this).addClass('active')
-        let getId = $(this).attr('id')
-
-        $("body").attr('class', '');
-
-        if(getId == 'Button1'){
-            $('body').addClass('color1') 
-            localStorage.setItem('switerColor', 'color1')
-        }else if(getId == 'Button2'){
-            $('body').addClass('color2')
-            localStorage.setItem('switerColor', 'color2')
-        }else if(getId == 'Button3'){
-            $('body').addClass('color3')
-            localStorage.setItem('switerColor', 'color3')
-        }else if(getId == 'Button4'){
-            $('body').addClass('color4')
-            localStorage.setItem('switerColor', 'color4')
-        }else if(getId == 'Button5'){
-            $('body').addClass('color5')
-            localStorage.setItem('switerColor', 'color5')
-        }else if(getId == 'Button6'){
-            $('body').addClass('color6')
-            localStorage.setItem('switerColor', 'color6')
-        }else if(getId == 'Button7'){
-            $('body').addClass('color7')
-            localStorage.setItem('switerColor', 'color7')
-        }else if(getId == 'Button8'){
-            $('body').addClass('color8')
-            localStorage.setItem('switerColor', 'color8')
-        }else if(getId == 'Button9'){
-            $('body').addClass('color9')
-            localStorage.setItem('switerColor', 'color9')
-        }else if(getId == 'Button10'){
-            $('body').addClass('color10')
-            localStorage.setItem('switerColor', 'color10')
-        }else if(getId == 'Button11'){
-            $('body').addClass('color11')
-            localStorage.setItem('switerColor', 'color11')
-        }else if(getId == 'Button12'){
-            $('body').addClass('color12')
-            localStorage.setItem('switerColor', 'color12')
-        }
-    });
-
-    $(window).on('load', function(){
-        if(localStorage.getItem('switerColor') == 'color1'){
-            $('body').addClass('color1') 
-            $('#Button1').addClass('active') 
-        }else if(localStorage.getItem('switerColor') == 'color2'){
-            $('body').addClass('color2')
-            $('#Button2').addClass('active') 
-        }else if(localStorage.getItem('switerColor') == 'color3'){
-            $('body').addClass('color3')
-            $('#Button3').addClass('active') 
-        }else if(localStorage.getItem('switerColor') == 'color4'){
-            $('body').addClass('color4')
-            $('#Button4').addClass('active') 
-        }else if(localStorage.getItem('switerColor') == 'color5'){
-            $('body').addClass('color5')
-            $('#Button5').addClass('active') 
-        }else if(localStorage.getItem('switerColor') == 'color6'){
-            $('body').addClass('color6')
-            $('#Button6').addClass('active') 
-        }else if(localStorage.getItem('switerColor') == 'color7'){
-            $('body').addClass('color7')
-            $('#Button7').addClass('active') 
-        }else if(localStorage.getItem('switerColor') == 'color8'){
-            $('body').addClass('color8')
-            $('#Button8').addClass('active') 
-        }else if(localStorage.getItem('switerColor') == 'color9'){
-            $('body').addClass('color9')
-            $('#Button9').addClass('active') 
-        }else if(localStorage.getItem('switerColor') == 'color10'){
-            $('body').addClass('color10')
-            $('#Button10').addClass('active') 
-        }else if(localStorage.getItem('switerColor') == 'color11'){
-            $('body').addClass('color11')
-            $('#Button11').addClass('active') 
-        }else if(localStorage.getItem('switerColor') == 'color12'){
-            $('body').addClass('color12')
-            $('#Button12').addClass('active') 
-        }
-
-    })
 
 })(window.jQuery);

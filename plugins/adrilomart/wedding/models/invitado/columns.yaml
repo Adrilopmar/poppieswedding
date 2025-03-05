@@ -1,0 +1,35 @@
+columns:
+    id:
+        label: id
+        type: number
+        sortable: true
+    created_at:
+        label: created_at
+        type: datetime
+    nombre:
+        label: nombre
+        type: text
+        searchable: true
+        sortable: true
+    apellidos:
+        label: apellidos
+        type: text
+        searchable: true
+        sortable: true
+    telf:
+        label: telf
+        type: text
+    autocar:
+        label: autocar
+        type: switch
+        sortable: true
+    hijosas:
+        label: hijos
+        type: text
+        sortable: true
+        relation: ninos
+        valueFrom: nombre
+    pre_boda:
+        label: pre_boda
+        type: switch
+        sortable: true

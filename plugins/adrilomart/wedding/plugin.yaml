@@ -1,0 +1,20 @@
+plugin:
+    name: 'adrilomart.wedding::lang.plugin.name'
+    description: 'adrilomart.wedding::lang.plugin.description'
+    author: AdriLoMart
+    icon: oc-icon-heart
+    homepage: ''
+navigation:
+    wedding:
+        label: Boda
+        url: adrilomart/wedding/invitados
+        icon: icon-heart
+        sideMenu:
+            invitados:
+                label: Invitados
+                url: adrilomart/wedding/invitados
+                icon: icon-users
+            hijos:
+                label: Hijos
+                url: adrilomart/wedding/hijos
+                icon: icon-user

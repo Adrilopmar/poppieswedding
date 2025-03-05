@@ -1,0 +1,33 @@
+fields:
+    nombre:
+        label: Nombre
+        span: auto
+        type: text
+    apellidos:
+        label: Apellidos
+        span: auto
+        type: text
+    telf:
+        label: Telf
+        span: auto
+        type: text
+    alergias:
+        label: Alergias
+        span: auto
+        type: textarea
+    email:
+        label: Correo
+        span: auto
+        type: text
+    autocar:
+        label: Autocar
+        span: auto
+        type: switch
+    pre_boda:
+        label: 'Pre boda'
+        span: auto
+        type: switch
+    hijosas:
+        label: Hijos
+        span: auto
+        type: switch

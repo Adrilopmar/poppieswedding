@@ -1,0 +1,21 @@
+subject = "Nueva confirmación para boda"
+==
+
+<h2>{{ nombre }} {{ apellidos }} ha confirmado la asistencia.</h2>
+<p><strong>telefono:</strong> {{ telf }} <br>
+<strong>Correo:</strong> {{ email }} <br>
+<strong>Servicio de autocar:</strong> {{ autocar ? 'Sí' : 'No' }} <br>
+<strong>Alergias:</strong> {{ alergias }}</p>
+
+{% if hijos %}
+    <ul>Ha inscrito también a:</ul>
+    {% for ninio in hijo %}
+        {% if loop.firt %}
+            <hr>
+        {% endif %}
+        <li><strong>Nombre:</strong> {{ ninio.nombre }} {{ ninio.apellidos }} </li>
+        <li><strong>Servicio de autocar:</strong> {{ ninio.autocar ? 'Sí' : 'No' }}</li>
+        <li><strong>Alergias:</strong> {{ ninio.alergias }}</li>
+        <hr>
+    {% endfor %}
+{% endif %}

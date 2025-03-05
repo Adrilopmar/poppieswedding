@@ -2,6 +2,8 @@ url = "/"
 layout = "default"
 title = "Boda | Jael & Álex"
 meta_title = "Boda | Jael Álex"
+
+[InvitadosBoda]
 ==
 <!-- start page-wrapper -->
     <div class="page-wrapper">
@@ -49,13 +51,12 @@ meta_title = "Boda | Jael Álex"
         <!-- start couple-section -->
         <section class="couple-section section-padding-top" id="donde">
             <div class="container">
-                <div class="prevent-padding-left-row">
-                    <div class="couple-area">
-                            {# <h3>¿DÓNDE?</h3> #}
+                <div class="prevent-padding-left-row col-12">
+                    <div class="couple-area col-12 d-md-none">
                             <h3>¿Dónde?</h3>
-                            <div class="text-grid bride">
-                                <h3>Masia Piguillem</h3>
-                                <p>Carretera C-37, km. 163, 08572 <br>
+                            <div class="text-grid text-center">
+                                <h3 class="titulo-masia">Masia Piguillem</h3>
+                                <p class="col-9">Carretera C-37, km. 163, 08572, <br>
                                     Sant Andreu de la Vola (Barcelona).</p>
                                {# <div class="social">
                                     <ul>
@@ -67,14 +68,44 @@ meta_title = "Boda | Jael Álex"
                             </div>
                             {# <p class="area-description">Será una celebración al aire libre en un rincón ubicado en plena naturaleza y rodeado de jardines, bosques y paisajes cautivadores.</p> #}
                            
-                            <div class="middle-couple-pic">
+                            <div class="middle-couple-pic ">
                                 <div class="middle-couple-pic-inner">
-                                    <img src="{{ 'assets/images/poppies/foto_masia_piguillem.jpg' | theme }}" alt="poppi field">
+                                    <img src="{{ 'assets/images/poppies/foto_masia.jpg' | theme }}" alt="poppi field">
                                 </div>
                             </div>
-                            <p class="area-description">La ceremonia será en el bosque que hay en la misma finca, de allí pasaremos a disfrutar de un aperitivo en el jardín, y por último la cena y la fiesta tendrán lugar en el salón acristalado.</p>
+                           {# <p class="area-description col-9 col-md-6 mt-2 mt-md-5">La ceremonia será en el bosque que hay en la misma finca, de allí pasaremos a disfrutar de un aperitivo en el jardín, y por último la cena y la fiesta tendrán lugar en el salón acristalado.</p> #}
+                             <p class="area-description col-9 col-md-6 mt-2 mt-md-5">Será una celebración al aire libre en un rincón ubicado en plena naturaleza y rodeado de jardines, bosques y paisajes cautivadores.</p> 
 
                         </div>
+                    <div class="couple-area col-12 d-none d-md-flex justify-content-between">
+                        <div class="left-container-picture col-md-6 text-center">
+                            <h3>¿Dónde?</h3>
+
+                            {# <p class="area-description mx-auto mt-md-5 col-md-9 ">La ceremonia será en el bosque que hay en la misma finca, de allí pasaremos a disfrutar de un aperitivo en el jardín, y por último la cena y la fiesta tendrán lugar en el salón acristalado.</p> #}
+                            <p class="area-description mx-auto mt-md-5 col-md-9 ">Será una celebración al aire libre en un rincón ubicado en plena naturaleza y rodeado de jardines, bosques y paisajes cautivadores.</p>
+                            <div class="text-center col-12 mt-4">
+                                <h3 class="titulo-masia text-center mb-4">Masia Piguillem</h3>
+                                <p>Carretera C-37, km. 163, 08572, <br>
+                                    Sant Andreu de la Vola (Barcelona).</p>
+                            </div>  
+                        </div>
+                        
+                        <div class="container-foto-casa-poppy">
+                            <div class="middle-couple-pic">
+                                <div class="middle-couple-pic-inner">
+                                    <img src="{{ 'assets/images/poppies/foto_masia.jpg' | theme }}" alt="piguillem">
+                                </div>
+                            </div>
+                                <!-- <img class="fons-poppy-top" src="{{ 'assets/images/poppies/fons-foto.png' | theme }}" alt="piguillem"> -->
+                                <img class="fons-poppy-bot" src="{{ 'assets/images/poppies/fons-foto.png' | theme }}" alt="piguillem">
+                           {# <div class="text-center col-12 mt-4">
+                                <h3 class="titulo-masia text-center mb-4">Masia Piguillem</h3>
+                                <p>Carretera C-37, km. 163, 08572, <br>
+                                    Sant Andreu de la Vola (Barcelona).</p>
+                            </div>  #}
+                        </div>
+                    
+                    </div>
                 </div>
             </div> <!-- end container -->
         </section>
@@ -83,17 +114,32 @@ meta_title = "Boda | Jael Álex"
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col col-xs-12">
-                        <div class="couple-area clearfix">
-                            <div class="text-grid bride">
+                        <div class="couple-area clearfix justify-content-between d-md-none">
+                            <div class="order-md-2 col-md-6 text-center mb-5">
                                 <h3>
                                     {# <span class="left-part">PROGRAMA</span><br><span class="right-part">DEL GRAN DÍA</span> #}
-                                    <span class="left-part">Horarios</span>
+                                    Horarios
                                 </h3>
-                                <p class="planning-description">Aquí te detallamos el plan para ese día tan especial.</p>
-                                <p class="planning-description">¡Estamos muy emocionados de poder compartirlo con todos vosotros!</p>
-                                <div class="container-timeline">
-                                    <img src="{{ 'assets/images/poppies/timeline.png' | theme }}" alt="timeline" width="300">
-                                </div>
+                                <p class="planning-description col-9 mx-auto">Aquí te detallamos el plan para ese día tan especial.</p>
+                                <p class="planning-description col-9 mx-auto">¡Estamos muy emocionados de poder compartirlo con todos vosotros!</p>
+                            </div>
+                            
+                            <div class="container-timeline order-md-1">
+                                <img src="{{ 'assets/images/poppies/timeline.png' | theme }}" alt="timeline" width="300">
+                            </div>
+                        </div>
+                        <div class="couple-area clearfix d-none d-md-flex flex-column">
+                            <div class="col-md-6 text-center">
+                                <h3>
+                                    {# <span class="left-part">PROGRAMA</span><br><span class="right-part">DEL GRAN DÍA</span> #}
+                                    Horarios
+                                </h3>
+                                <p class="planning-description col-9 mx-auto">Aquí te detallamos el plan para ese día tan especial.</p>
+                                <p class="planning-description col-9 mx-auto">¡Estamos muy emocionados de poder compartirlo con todos vosotros!</p>
+                            </div>
+                            
+                            <div class="container-timeline col-10 text-center">
+                                <img src="{{ 'assets/images/poppies/timeline_horizontal.png' | theme }}" alt="timeline" width="900">
                             </div>
                         </div>
                     </div>
@@ -105,9 +151,63 @@ meta_title = "Boda | Jael Álex"
         <!-- start wpo-story-section -->
         
         {% partial 'informacion_adicional' %}
-
-        <p class="gracias">¡Gracias por ser parte  <br>de nuestra historia!</p>
-        <img src="{{ 'assets/images/poppies/poppy_footer.png' | theme }}" alt="">
+        
+        <section class="couple-section mt-5" id="weasly">
+            <div class="container">
+                <div class="prevent-padding-left-row col-12">
+                    <div class="couple-area col-12 d-md-none">
+                            <h3>Feed me baby one more time!</h3>
+                           
+                            <div class="middle-couple-pic ">
+                                <div class="middle-couple-pic-inner">
+                                    <img src="{{ 'assets/images/poppies/foto_weasley.jpg' | theme }}" alt="poppi field">
+                                </div>
+                            </div>
+                            <p class="area-description col-10 mt-2 mt-md-5">Nuestra querida Weasley nos comenta que tu asistencia es más que suficiente, pero si quieres contribuir a que pueda seguir comiendo a todas horas, aceptamos contribuciones por bizum o transferencia.</p>
+                            <div class="contact-ft">
+                                <span>
+                                    <p class="text-center mt-5 d-flex align-items-center">
+                                    <img style="margin-right: 10px" src="{{ 'assets/images/poppies/icon_porc.svg' | theme }}" alt="piggy bank" width="30"> 
+                                        ES28 2100 0961 7101 0032 3659
+                                    </p>
+                                </span>
+                            </div>
+        
+                        </div>
+                    <div class="couple-area col-12 d-none d-md-flex justify-content-between">
+                        <div class="left-container-picture col-md-6 text-center">
+                            <h3>Feed me Baby One More Time!</h3>
+        
+                            <p class="area-description mx-auto mt-md-5 col-md-9 ">Nuestra querida Weasley nos comenta que tu asistencia es más que suficiente, pero si quieres contribuir a que pueda seguir comiendo a todas horas, aceptamos contribuciones por bizzum o transferencia.</p>
+                            <div class="contact-ft">
+                                <span>
+                                    <p class="text-center mx-auto mt-5">
+                                    <img src="{{ 'assets/images/poppies/icon_porc.svg' | theme }}" alt="piggy bank" width="30"> 
+                                        ES28 2100 0961 7101 0032 3659
+                                    </p>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="container-foto-casa-poppy">
+                            <div class="middle-couple-pic">
+                                <div class="middle-couple-pic-inner">
+                                    <img src="{{ 'assets/images/poppies/foto_weasley.jpg' | theme }}" alt="piguillem">
+                                </div>
+                            </div>
+                            <img class="fons-poppy-bot" src="{{ 'assets/images/poppies/fons-foto.png' | theme }}" alt="piguillem">
+                        </div>
+                    
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <section class="section-padding-top">
+            <p class="gracias col-9">¡Gracias por ser parte  <br class="d-md-none"> de nuestra historia!</p>
+            <div class="d-md-flex">
+                <img class="col-md-4 m-auto" src="{{ 'assets/images/poppies/poppy_footer.png' | theme }}" alt="">
+                
+            </div>
+        </section>
         <!-- end story-section -->
         <!-- start of wpo-site-footer-section -->
         {% partial 'footer' %}

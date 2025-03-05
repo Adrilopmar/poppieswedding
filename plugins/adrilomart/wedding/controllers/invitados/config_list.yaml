@@ -1,0 +1,12 @@
+list: $/adrilomart/wedding/models/invitado/columns.yaml
+modelClass: Adrilomart\Wedding\Models\Invitado
+title: Invitados
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'adrilomart/wedding/invitados/update/:id'

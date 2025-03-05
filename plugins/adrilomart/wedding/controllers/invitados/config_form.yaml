@@ -1,0 +1,10 @@
+name: Invitados
+form: $/adrilomart/wedding/models/invitado/fields.yaml
+modelClass: Adrilomart\Wedding\Models\Invitado
+defaultRedirect: adrilomart/wedding/invitados
+create:
+    redirect: 'adrilomart/wedding/invitados/update/:id'
+    redirectClose: adrilomart/wedding/invitados
+update:
+    redirect: adrilomart/wedding/invitados
+    redirectClose: adrilomart/wedding/invitados

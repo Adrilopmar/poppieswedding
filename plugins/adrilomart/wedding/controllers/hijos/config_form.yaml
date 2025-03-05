@@ -1,0 +1,10 @@
+name: Hijos
+form: $/adrilomart/wedding/models/hijos/fields.yaml
+modelClass: Adrilomart\Wedding\Models\Hijos
+defaultRedirect: adrilomart/wedding/hijos
+create:
+    redirect: 'adrilomart/wedding/hijos/update/:id'
+    redirectClose: adrilomart/wedding/hijos
+update:
+    redirect: adrilomart/wedding/hijos
+    redirectClose: adrilomart/wedding/hijos

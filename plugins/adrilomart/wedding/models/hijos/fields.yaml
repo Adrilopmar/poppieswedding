@@ -1,0 +1,17 @@
+fields:
+    nombre:
+        label: Nombre
+        span: auto
+        type: text
+    apellidos:
+        label: Apellidos
+        span: auto
+        type: text
+    alergias:
+        label: Alergias
+        span: auto
+        type: textarea
+    autocar:
+        label: Autocar
+        span: auto
+        type: switch

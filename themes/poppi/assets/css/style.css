@@ -2638,7 +2638,7 @@ img {
   .wpo-site-header .container {
     width: 100%;
   }
-  .wpo-site-header .mobile-menu button {
+  .wpo-site-header .mobail-menu button {
     background-color: #fff;
     width: 40px;
     height: 35px;
@@ -2648,18 +2648,18 @@ img {
     position: relative;
     z-index: 20;
   }
-  .wpo-site-header .mobile-menu button:focus {
+  .wpo-site-header .mobail-menu button:focus {
     outline: none;
     box-shadow: none;
   }
-  .wpo-site-header .mobile-menu button span {
+  .wpo-site-header .mobail-menu button span {
     background-color: #fff;
     width: 20px;
     display: block;
     height: 2px;
     margin-bottom: 5px;
   }
-  .wpo-site-header .mobile-menu button span:last-child {
+  .wpo-site-header .mobail-menu button span:last-child {
     margin: 0;
   }
   .wpo-site-header #navbar {
@@ -10148,7 +10148,7 @@ product-design
   color: #d58675;
 }
 .color2 .wpo-team-section .wpo-team-wrap .wpo-team-item .wpo-team-text ul li a:hover,
-.color2 .wpo-site-header .mobile-menu button,
+.color2 .wpo-site-header .mobail-menu button,
 .color2 .wpo-site-header #navbar > ul > li .sub-menu a:after,
 .color2 .education-area ul li:before,
 .color2 .blog-sidebar .search-widget form button,
@@ -10400,7 +10400,7 @@ product-design
   color: #1e8267;
 }
 .color3 .wpo-team-section .wpo-team-wrap .wpo-team-item .wpo-team-text ul li a:hover,
-.color3 .wpo-site-header .mobile-menu button,
+.color3 .wpo-site-header .mobail-menu button,
 .color3 .wpo-site-header #navbar > ul > li .sub-menu a:after,
 .color3 .education-area ul li:before,
 .color3 .blog-sidebar .search-widget form button,
@@ -10652,7 +10652,7 @@ product-design
   color: #de5ca2;
 }
 .color4 .wpo-team-section .wpo-team-wrap .wpo-team-item .wpo-team-text ul li a:hover,
-.color4 .wpo-site-header .mobile-menu button,
+.color4 .wpo-site-header .mobail-menu button,
 .color4 .wpo-site-header #navbar > ul > li .sub-menu a:after,
 .color4 .education-area ul li:before,
 .color4 .blog-sidebar .search-widget form button,
@@ -10903,7 +10903,7 @@ product-design
   color: #d9ba91;
 }
 .color5 .wpo-team-section .wpo-team-wrap .wpo-team-item .wpo-team-text ul li a:hover,
-.color5 .wpo-site-header .mobile-menu button,
+.color5 .wpo-site-header .mobail-menu button,
 .color5 .wpo-site-header #navbar > ul > li .sub-menu a:after,
 .color5 .education-area ul li:before,
 .color5 .blog-sidebar .search-widget form button,
@@ -11158,7 +11158,7 @@ product-design
   color: #99337f;
 }
 .color6 .wpo-team-section .wpo-team-wrap .wpo-team-item .wpo-team-text ul li a:hover,
-.color6 .wpo-site-header .mobile-menu button,
+.color6 .wpo-site-header .mobail-menu button,
 .color6 .wpo-site-header #navbar > ul > li .sub-menu a:after,
 .color6 .education-area ul li:before,
 .color6 .blog-sidebar .search-widget form button,
@@ -11409,7 +11409,7 @@ product-design
   color: #18A7B5;
 }
 .color7 .wpo-team-section .wpo-team-wrap .wpo-team-item .wpo-team-text ul li a:hover,
-.color7 .wpo-site-header .mobile-menu button,
+.color7 .wpo-site-header .mobail-menu button,
 .color7 .wpo-site-header #navbar > ul > li .sub-menu a:after,
 .color7 .education-area ul li:before,
 .color7 .blog-sidebar .search-widget form button,
@@ -11660,7 +11660,7 @@ product-design
   color: #668c25;
 }
 .color8 .wpo-team-section .wpo-team-wrap .wpo-team-item .wpo-team-text ul li a:hover,
-.color8 .wpo-site-header .mobile-menu button,
+.color8 .wpo-site-header .mobail-menu button,
 .color8 .wpo-site-header #navbar > ul > li .sub-menu a:after,
 .color8 .education-area ul li:before,
 .color8 .blog-sidebar .search-widget form button,
@@ -11911,7 +11911,7 @@ product-design
   color: #ff8051;
 }
 .color9 .wpo-team-section .wpo-team-wrap .wpo-team-item .wpo-team-text ul li a:hover,
-.color9 .wpo-site-header .mobile-menu button,
+.color9 .wpo-site-header .mobail-menu button,
 .color9 .wpo-site-header #navbar > ul > li .sub-menu a:after,
 .color9 .education-area ul li:before,
 .color9 .blog-sidebar .search-widget form button,
@@ -12162,7 +12162,7 @@ product-design
   color: #dd6673;
 }
 .color10 .wpo-team-section .wpo-team-wrap .wpo-team-item .wpo-team-text ul li a:hover,
-.color10 .wpo-site-header .mobile-menu button,
+.color10 .wpo-site-header .mobail-menu button,
 .color10 .wpo-site-header #navbar > ul > li .sub-menu a:after,
 .color10 .education-area ul li:before,
 .color10 .blog-sidebar .search-widget form button,
@@ -12413,7 +12413,7 @@ product-design
   color: #e38138;
 }
 .color11 .wpo-team-section .wpo-team-wrap .wpo-team-item .wpo-team-text ul li a:hover,
-.color11 .wpo-site-header .mobile-menu button,
+.color11 .wpo-site-header .mobail-menu button,
 .color11 .wpo-site-header #navbar > ul > li .sub-menu a:after,
 .color11 .education-area ul li:before,
 .color11 .blog-sidebar .search-widget form button,
@@ -12664,7 +12664,7 @@ product-design
   color: #b19a56;
 }
 .color12 .wpo-team-section .wpo-team-wrap .wpo-team-item .wpo-team-text ul li a:hover,
-.color12 .wpo-site-header .mobile-menu button,
+.color12 .wpo-site-header .mobail-menu button,
 .color12 .wpo-site-header #navbar > ul > li .sub-menu a:after,
 .color12 .education-area ul li:before,
 .color12 .blog-sidebar .search-widget form button,

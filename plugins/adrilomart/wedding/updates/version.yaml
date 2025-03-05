@@ -1,0 +1,20 @@
+v1.0.1:
+    - 'Initialize plugin'
+v1.0.2:
+    - 'Created table adrilomart_wedding_invitados'
+    - builder_table_create_adrilomart_wedding_invitados.php
+v1.0.3:
+    - 'Updated table adrilomart_wedding_invitados'
+    - builder_table_update_adrilomart_wedding_invitados.php
+v1.0.4:
+    - 'Created table adrilomart_wedding_hijos'
+    - builder_table_create_adrilomart_wedding_hijos.php
+v1.0.5:
+    - 'Updated table adrilomart_wedding_hijos'
+    - builder_table_update_adrilomart_wedding_hijos.php
+v1.0.6:
+    - 'Updated table adrilomart_wedding_invitados'
+    - builder_table_update_adrilomart_wedding_invitados_2.php
+v1.0.7:
+    - 'Updated table adrilomart_wedding_invitados'
+    - builder_table_update_adrilomart_wedding_invitados_3.php

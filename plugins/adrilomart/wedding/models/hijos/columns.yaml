@@ -1,0 +1,25 @@
+columns:
+    id:
+        label: id
+        type: number
+        sortable: true
+    nombre:
+        label: nombre
+        type: text
+        searchable: true
+    apellidos:
+        label: apellidos
+        type: text
+        searchable: true
+        sortable: true
+    autocar:
+        label: autocar
+        type: switch
+        sortable: true
+    invitado_id:
+        label: Padre/Madre
+        type: text
+        searchable: true
+        sortable: true
+        relation: Invitado
+        valueFrom: nombre
