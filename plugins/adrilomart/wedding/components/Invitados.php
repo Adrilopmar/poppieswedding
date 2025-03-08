@@ -8,6 +8,9 @@ use Log;
 use Input;
 use Request;
 use Mail;
+use Flash;
+use Redirect;
+use Cms;
 
 
 /**
@@ -38,14 +41,14 @@ class Invitados extends ComponentBase
     }
     
     public function onBoda(){
-        
+
         $data = Input::all();
             
         $rules = [
             'nombre' => 'required',
             'apellidos' => 'required',
             'telf' => 'required',
-            'email' => 'required',
+            'email' => 'required|email',
             'autocar' => 'required',
             'hijos' => 'required'
         ];
@@ -70,9 +73,14 @@ class Invitados extends ComponentBase
             $invitado->alergias = $data['alergias'];
         }
         
+        if ( $data['hijos'] && !isset( $data['hijo'] )){
+            Flash::warning('Añade un hijo para continuar.');
+            return;
+        }
+        
         $invitado->save();
-
-        if( isset( $data['hijo'] ) ){
+        
+        if( $data['hijos'] && isset( $data['hijo'] ) ){
             foreach( $data['hijo'] as $hijo ){
                 
                 $kid = new Hijos;
@@ -87,12 +95,9 @@ class Invitados extends ComponentBase
                 $kid->save();
             } 
         }
-        // else{
-        //     return Flash::warning('Añade un hijo para continuar.');
-        // }
-
+        
         // template para enviar a los host informando de una nueva inscripción.
-        $to = ["adria.lop.mar@gmail.com","franvm91@gmail.com"];
+        $to = ["jaelriaz@gmail.com","alejandro.carrillo.corts@gmail.com"];
         Mail::send( 'adrilomart.wedding::mails.nuevo_invitado', $data, function( $message ) use ( $to, $invitado ) {
             $message->to( $to );
         });

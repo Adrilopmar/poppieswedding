@@ -12,7 +12,8 @@ fields:
         span: auto
         type: text
     alergias:
-        label: Alergias
+        label: 'Intolerancias y preferencias'
+        size: ''
         span: auto
         type: textarea
     email:

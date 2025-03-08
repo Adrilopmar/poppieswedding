@@ -144,7 +144,12 @@ a {
   text-decoration: none;
   transition: all 0.2s;
 }
-
+.link-masia{
+  color: var(--verd-clar);
+}
+.link-masia:hover{
+  color: var(--verd-fosc);
+}
 a:hover {
   text-decoration: none;
 }
@@ -152,7 +157,12 @@ a:hover {
 img {
   max-width: 100%;
 }
-
+.oc-flash-message.warning,
+.oc-flash-message.success {
+    bottom:50px;
+    top: auto;
+    text-align: center;
+}
 .wpo-box-style {
   padding: 0 100px;
 }
@@ -3102,7 +3112,7 @@ img {
 }
 
 .static-hero {
-  background-image: url('../images/poppies/foto_home_1.jpg');
+  background-image: url('../images/poppies/bg-mobile.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3111,7 +3121,7 @@ img {
 @media (min-width: 767px) {
   .static-hero {
     margin-top: 71px;
-    background-image: url('../images/poppies/jael-alex-desktop.jpg');
+    background-image: url('../images/poppies/home-desktop.jpg');
     height: 65vh;
     background-position: center;
   }
@@ -4911,8 +4921,8 @@ transform: rotate(deg);
   font-weight: 400;
   text-align: left;
 }
-.couple-section .text-grid .titulo-masia {
-  font-size: 22px;
+.titulo-masia {
+  font-size: 22px !important;
   margin: .5em auto;
   font-weight: 400;
   text-align: center;
