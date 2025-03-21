@@ -16,13 +16,13 @@
                             </button> -->
                         </div>
                     </div>
-                    <div class="col-md-4 col-7">
+                    <div class="col-md-3 col-7">
                         <div class="navbar-header text-center">
-                            <a class="logo smooth-link" href="#std" id="saveTheDate">Jael & Alex </a><br class="d-md-none">
+                            <a class="logo" href="{{ 'index' | page }}" id="saveTheDate">Jael & Alex </a><br class="d-md-none">
                             <span id="dateSave">03 mayo 2025</span>
                         </div>
                     </div>
-                    <div class="col-lg-8 col-md-1 col-1">
+                    <div class="col-lg-9 col-md-1 col-1">
                         <div id="navbar" class="collapse navbar-collapse navigation-holder md-justify-content-end">
                             <button class="menu-close"><i class="ti-close"></i></button>
                             <ul class="nav navbar-nav mb-2 mb-lg-0">
@@ -47,6 +47,11 @@
                                 <li>
                                     <a class="smooth-link" href="#contact">Contacto</a>
                                 </li>
+                                {% if this.page.logged %}
+                                    <li>
+                                        <a href="{{'datos' | page }}">Datos</a>
+                                    </li>
+                                {% endif %}
                             </ul>
 
                         </div><!-- end of nav-collapse -->

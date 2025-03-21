@@ -127,12 +127,12 @@ class Invitados extends ComponentBase
         header('Content-Type: text/html','charset=utf-8');
         header('Content-Disposition: text/csv; filename=exportacion_invitados'.date('y-m-d').'.csv');
 
-        $document = fopen('./storage/temp/export/exportacion_invitados'.date('y-m-d').'.csv', 'w');
+        $document = fopen('./export/exportacion_invitados'.date('y-m-d').'.csv', 'w');
         $columns = array();
 
         $cols_export = [
             // tabla invitados
-            'id','nombre','apellidos','telf','email','autocar','alergias'
+            'id','nombre','apellidos','telf','email','autocar','alergias','hijos'
         ];
 
         fputcsv($document, $cols_export,';');
@@ -145,8 +145,15 @@ class Invitados extends ComponentBase
             $fila['apellidos'] = $row->apellidos;
             $fila['telf'] = $row->telf;
             $fila['email'] = $row->email;
-            $fila['autocar'] = $row->autocar;
+            $fila['autocar'] = $row->autocar ? 'Sí' : 'No';
             $fila['alergias'] = $row->alergias;
+
+            if ( $row->hijosas ){
+                $fila['hijos'] ='';
+                 foreach ( $row->ninos as $hijo ){
+                     $fila['hijos'] = $fila['hijos'] . 'Nombre: '. $hijo->nombre . ' - Alergias: ' . $hijo->alergias .' - Autocar: ' . ($hijo->autocar ? 'Sí //// ' : 'No //// ');
+                }
+            }
 
             fputcsv($document, $fila,';');
         }
@@ -154,9 +161,8 @@ class Invitados extends ComponentBase
         fclose($document);
         ob_flush();
 
-        log::info('asd');
 
-        return Response::download('./storage/temp/export/exportacion_invitados'.date('y-m-d').'.csv');
+        return Redirect::to('./export/exportacion_invitados'.date('y-m-d').'.csv');
         // return Response::download('./storage/temp/export/exportacion_invitados'.date('y-m-d').'.csv');
         
 

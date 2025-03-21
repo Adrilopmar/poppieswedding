@@ -1,0 +1,97 @@
+url = "/datos/boda_poppies"
+layout = "default"
+title = "Boda | Jael & Álex"
+meta_title = "Boda | Jael Álex"
+
+[InvitadosBoda]
+==
+
+<?php
+    
+   use Adrilomart\Wedding\Models\Invitado;
+   use Adrilomart\Wedding\Models\Hijos;
+    
+    function onStart(){
+        
+        if ( !$loggedIn = BackendAuth::check() ) {
+            return Redirect::to('/');
+         }
+         
+        $this->page['invitados'] = Invitado::get();
+        $this->page['hijos'] = Hijos::get();
+        $this->page['autocarAdulto'] = Invitado::where('autocar', true)->get();
+        $this->page['autocarHijo'] = Hijos::where('autocar', true)->get();
+         
+    }
+?>
+
+==
+<style>
+    h2{
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    .header-datos{
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    .main-datos{
+        margin-top: 10em;
+    }
+    .list-datos{
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2em;
+        justify-content: space-around;
+        margin-bottom: 2em;
+        align-items: stretch;
+    }
+    .list-datos li{
+        font-size: 24px;
+    }
+    button{
+        margin-left: auto;
+    }
+</style>
+{% set invitados = this.page.invitados %}
+{% set hijos = this.page.hijos %}
+{% set autocarAdulto = this.page.autocarAdulto %}
+{% set autocarHijo = this.page.autocarHijo %}
+<div class="header-datos">
+    {% partial 'header' %}
+</div>
+<div class="container main-datos col-11 mx-auto">
+    <div class="d-flex col-12">
+        <button type="submit" class="theme-btn ml-auto" data-request="{{InvitadosBoda}}::onExport" data-attach-loading >Exportar invitados</button>
+    </div>
+    <h2 class="text-center" >Invitados a la boda</h2>
+        
+    <ul class="list-datos text-center col-11 mx-auto">
+        {% set totalInvitados = invitados | length +  hijos | length %}
+        <li class="col-12">Total invitados <br  /> {{ totalInvitados }}</li>
+        <li class="col-5"> Total adultos <br  /> {{ invitados | length }}</li>
+        <li class="col-5"> Total autocar adultos <br  /> {{ autocarAdulto | length }}</li>
+        <li class="col-5"> Total Hijos <br  /> {{ hijos | length }}</li>
+        <li class="col-5"> Total autocar hijos <br  /> {{ autocarHijos | length }}</li>
+    </ul>
+    
+    <h2 class="text-center">¿Quién va en autocar?</h2>
+    {% set counter = 1 %}
+    <div class="text-center">
+        {% for invitado in invitados %}
+            {% if invitado.autocar %}
+                <p>{{ counter }} - {{ invitado.nombre }} {{ invitado.apellidos }}</p> 
+                {% if invitado.hijosas %}
+                <p><strong>¿Hijos y/o Hijas?</strong></p>
+                    {% for hijo in invitado.ninos %}
+                        <p>{{ hijo.nombre }} {{ hijo.apellidos }} - servicio autocar ? {{ hijo.autocar ? 'Sí' : 'No' }}</p> 
+                    {% endfor %}
+                {% endif %}
+                {% set counter = counter + 1 %}
+            {% endif %}
+        {% endfor %}
+    </div>
+    
+</div>
