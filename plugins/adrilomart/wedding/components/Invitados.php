@@ -124,8 +124,8 @@ class Invitados extends ComponentBase
 
         $invitados = Invitado::get();
 
-        header('Content-Type: text/html','charset=utf-8');
-        header('Content-Disposition: text/csv; filename=exportacion_invitados'.date('y-m-d').'.csv');
+        header('Content-Type: text/csv','charset=utf-8');
+        header('Content-Disposition: attachment; filename=exportacion_invitados'.date('y-m-d').'.csv');
 
         $document = fopen('./export/exportacion_invitados'.date('y-m-d').'.csv', 'w');
         $columns = array();
@@ -161,76 +161,7 @@ class Invitados extends ComponentBase
         fclose($document);
         ob_flush();
 
-
-        return Redirect::to('./export/exportacion_invitados'.date('y-m-d').'.csv');
-        // return Response::download('./storage/temp/export/exportacion_invitados'.date('y-m-d').'.csv');
-        
-
-        // $invitados = Invitado::whereHas( 'eventos', function ( $q ) use ( $data ){
-        //     $q->where('evento_id', $data['event']);
-        // })->get();
-        
-        // $evento = Evento::where( 'id', $data['event'] )->first();
-
-        // header('Content-Type: text/html','charset=utf-8');
-        // header('Content-Disposition: attachment; filename="'.$evento->slug.'_exportacion_'.date('y-m-d').'.csv');
-
-        // $document = fopen('./storage/temp/export/'.$evento->slug.'_exportacion_'.date('y-m-d').'.csv', 'w');
-        // $columns = array();
-
-        // $cols_export = [
-        //     // tabla invitados
-        //     'id','nombre','apellidos','empresa','cargo','email','telf','alergias',
-        //     // tabla procedencia 
-        //     'procedencia','esta_denegado',
-        //     // tabla checkin
-        //     'esta_asistencia_anulada','hijos confirmados','hijos asistentes','checkin'
-        // ];
-        // fputcsv($document, $cols_export,';');
-
-        // foreach( $invitados as $key => $row ){
-            
-        //     $fila = array();
-        //     $fila['id'] = $row->id;
-        //     $fila['nombre'] = $row->nombre;
-        //     $fila['apellidos'] = $row->apellidos;
-        //     $fila['empresa'] = $row->empresa;
-        //     $fila['cargo'] = $row->cargo;
-        //     $fila['email'] = $row->email;
-        //     $fila['telf'] = $row->telf;
-        //     $fila['alergias'] = $row->alergias;
-            
-        //     foreach ( $row->procedencia as $from ) {
-        //         if ( $from->evento_id == $evento->id ) {
-        //             $fila['procedencia'] = $from->procedencia;
-        //             $fila['esta_denegado'] = $from->esta_denegado ? 'Si' : 'No';
-        //         }
-        //     }
-        //     foreach ( $row->checkin as $entrance ){
-        //         if( $entrance->evento_id == $evento->id ){
-        //             $fila['esta_asistencia_anulada'] = $from->esta_asistencia_anulada ? 'Asistencia anulada' : 'No' ;
-        //             $fila['hijos_confirmados'] = $entrance->hijos_confirmados;
-        //             $fila['hijos_asistentes'] = $entrance->hijos_asistentes;
-        //             if ( $entrance->updated_at > $evento->fecha_inicio && !$entrance->esta_asistencia_anulada ){
-        //                 $fila['checkin'] =  date("Y-m-d H:i:s", strtotime( $entrance->updated_at . '+1 hour' ));
-        //             }else if ($entrance->esta_asistencia_anulada){
-        //                 $fila['checkin'] = 'ASISTENCIA ANULADA';
-                        
-        //             }else{
-        //                 $fila['checkin'] = 'Checkin pendiente';
-        //             }
-        //         }
-        //     }
-
-        //     fputcsv($document, $fila,';');
-
-        // }
-        
-        // fclose($document);
-        // ob_flush();
-        // return Response::download('./storage/temp/export/'.$evento->slug.'_exportacion_'.date('y-m-d').'.csv');
-        //->deleteFileAfterSend(true);
-        
+        return Response::download('./export/exportacion_invitados'.date('y-m-d').'.csv');
     }
 
 }
